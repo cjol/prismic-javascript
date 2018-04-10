@@ -4,6 +4,8 @@ import { DefaultClient } from './client';
 import PrismicApi, { ApiOptions } from './Api';
 import ResolvedApi, { EXPERIMENT_COOKIE, PREVIEW_COOKIE } from './ResolvedApi';
 import { Document } from "./documents";
+import * as PrismicTypes from "./types";
+
 
 namespace Prismic {
 
@@ -24,6 +26,9 @@ namespace Prismic {
   export function api(url: string, options?: ApiOptions): Promise<ResolvedApi> {
     return getApi(url, options);
   }
+
+  export import Types = PrismicTypes
 }
+
 
 export = Prismic;
